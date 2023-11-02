@@ -22,7 +22,7 @@
             bindings = <
 &kp TAB         &kp Q        &kp W           &kp E               &kp R  &kp T         &kp Y      &kp U  &kp I                &kp O            &kp P                &kp BSPC
 &kp LEFT_SHIFT  &mt LCTRL A  &mt LEFT_ALT S  &mt LEFT_COMMAND D  &kp F  &kp G         &kp H      &kp J  &mt RIGHT_COMMAND K  &mt RIGHT_ALT L  &mt RCTRL SEMICOLON  &mt RIGHT_SHIFT APOS
-&kp LSHFT       &kp Z        &kp X           &kp C               &kp V  &kp B         &kp N      &kp M  &kp COMMA            &kp DOT          &kp FSLH             &kp ESC
+&kp ESCAPE      &kp Z        &kp X           &kp C               &kp V  &kp B         &kp N      &kp M  &kp COMMA            &kp DOT          &kp FSLH             &kp ESC
                                              &kp LGUI            &mo 1  &kp RETURN    &kp SPACE  &mo 2  &kp RALT
             >;
         };
@@ -35,10 +35,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans  &trans
-                                        &kp LGUI      &trans        &trans          &trans    &trans    &kp RALT
+&trans      &trans        &trans        &trans        &trans        &trans          &trans  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &kp N4  &kp N5  &kp N6  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans          &kp N0  &kp N1  &kp N2  &kp N3  &trans  &trans
+                                        &trans        &trans        &trans          &trans  &trans  &trans
             >;
         };
 
@@ -54,6 +54,15 @@
 &kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
 &kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
                              &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LS(AMPS)     &kp LS(STAR)   &trans         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LS(DLLR)     &kp LS(PRCNT)  &kp LS(CARET)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp EXCLAMATION  &kp LS(AT)     &kp LS(POUND)  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans           &trans
             >;
         };
     };
