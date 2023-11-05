@@ -53,10 +53,10 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp AMPERSAND    &kp ASTERISK  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp DOLLAR       &kp PERCENT   &kp CARET  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans           &trans
+&trans     &trans    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &trans    &trans  &kp AMPERSAND    &kp ASTERISK  &kp GRAVE  &trans     &trans
+&kp MINUS  &kp PLUS  &kp LEFT_BRACKET   &kp LPAR               &kp LEFT_BRACE   &trans    &trans  &kp DOLLAR       &kp PERCENT   &kp CARET  &kp EQUAL  &trans
+&trans     &trans    &trans             &trans                 &trans           &trans    &trans  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &trans     &trans
+                                        &trans                 &trans           &trans    &trans  &trans           &trans
             >;
         };
 
@@ -81,6 +81,15 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &kp PAGE_DOWN  &kp LEFT    &kp DOWN          &kp RIGHT   &kp C_VOLUME_DOWN  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans         &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp K_MUTE         &trans
                         &trans  &trans  &trans    &trans         &trans      &trans
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&kp  &kp EXCLAMATION  &kp AT            &kp HASH         &kp DOLLAR             &kp PERCENT          &kp CARET  &kp AMPS   &kp ASTERISK  &kp UNDERSCORE  &trans  &kp
+&kp  &kp GRAVE        &kp TILDE         &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET     &kp PIPE   &kp MINUS  &kp EQUAL     &kp PLUS        &kp     &kp
+&kp  &kp LESS_THAN    &kp GREATER_THAN  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET    &kp        &kp        &kp           &kp             &kp     &kp
+                                        &kp              &kp                    &kp                  &kp        &kp        &kp
             >;
         };
     };
