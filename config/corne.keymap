@@ -42,7 +42,7 @@
             >;
         };
 
-        layer_4 {
+        f_keys {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans   &kp F7  &kp F8  &kp F9  &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp F10  &kp F4  &kp F5  &kp F6  &kp F11  &kp F12
@@ -51,31 +51,7 @@
             >;
         };
 
-        layer_3 {
-            bindings = <
-&trans     &trans    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &trans    &trans  &kp AMPERSAND    &kp ASTERISK  &kp GRAVE  &trans     &trans
-&kp MINUS  &kp PLUS  &kp LEFT_BRACKET   &kp LPAR               &kp LEFT_BRACE   &trans    &trans  &kp DOLLAR       &kp PERCENT   &kp CARET  &kp EQUAL  &trans
-&trans     &trans    &trans             &trans                 &trans           &trans    &trans  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &trans     &trans
-                                        &trans                 &trans           &trans    &trans  &trans           &trans
-            >;
-        };
-
-        raise_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
-            >;
-        };
-
-        layer_5 {
+        media {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &kp PAGE_UP    &trans      &kp UP_ARROW      &trans      &kp C_VOLUME_UP    &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp PAGE_DOWN  &kp LEFT    &kp DOWN          &kp RIGHT   &kp C_VOLUME_DOWN  &trans
@@ -84,7 +60,7 @@
             >;
         };
 
-        layer_6 {
+        symbol {
             bindings = <
 &kp  &kp EXCLAMATION  &kp AT            &kp HASH         &kp DOLLAR             &kp PERCENT          &kp CARET  &kp AMPS   &kp ASTERISK  &kp UNDERSCORE  &trans  &kp
 &kp  &kp GRAVE        &kp TILDE         &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET     &kp PIPE   &kp MINUS  &kp EQUAL     &kp PLUS        &kp     &kp
