@@ -8,6 +8,7 @@ manifest:
     - name: zmk
       remote: urob
       revision: main
+      # revision: mouse-3.2
       import: app/west.yml
   self:
     path: config
