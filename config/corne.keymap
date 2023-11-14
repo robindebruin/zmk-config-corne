@@ -18,26 +18,39 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5 // right-hand keys
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2
 
-// /* left-hand HRMs */
-// ZMK_BEHAVIOR(hml, hold_tap,
-//     flavor = "balanced";
-//     tapping-term-ms = <280>;
-//     quick-tap-ms = <175>;                // repeat on tap-into-hold
-//     require-prior-idle-ms = <150>;
-//     bindings = <&kp>, <&kp>;
-//     hold-trigger-key-positions = <KEYS_R THUMBS>;
-//     hold-trigger-on-release;             // delay positional check until key-release
-// )
-// /* right-hand HRMs */
-// ZMK_BEHAVIOR(hmr, hold_tap,
-//     flavor = "balanced";
-//     tapping-term-ms = <280>;
-//     quick-tap-ms = <175>;                // repeat on tap-into-hold
-//     require-prior-idle-ms = <150>;
-//     bindings = <&kp>, <&kp>;
-//     hold-trigger-key-positions = <KEYS_L THUMBS>;
-//     hold-trigger-on-release;             // delay positional check until key-release
-// )
+/* ------MOUSE MOUSE SETTINGS----- */ 
+#define U_MOUSE_MOVE_MAX 1400                     /* <--- New max speed setting (default: 600) */
+#undef MOVE_UP
+#undef MOVE_DOWN
+#undef MOVE_LEFT
+#undef MOVE_RIGHT
+#define MOVE_UP MOVE_VERT(-U_MOUSE_MOVE_MAX)
+#define MOVE_DOWN MOVE_VERT(U_MOUSE_MOVE_MAX)
+#define MOVE_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
+#define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
+
+&mmv {
+	time-to-max-speed-ms = <400>;             /* <--- How long time until max speed is reached (default: 500) */
+};
+/* ------------------------------- */
+
+
+
+/* ------MOUSE WHEEL SETTINGS----- */ 
+#define U_MOUSE_SCROLL_MAX 100                    /* <--- New max speed setting (default: 10) */
+#undef SCROLL_UP
+#undef SCROLL_DOWN
+#undef SCROLL_LEFT
+#undef SCROLL_RIGHT
+#define SCROLL_UP SCROLL_VERT(U_MOUSE_SCROLL_MAX)
+#define SCROLL_DOWN SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
+#define SCROLL_LEFT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
+#define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
+
+&mwh {
+  time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
+};
+/* ------------------------------- */
 
 / {
     behaviors {
