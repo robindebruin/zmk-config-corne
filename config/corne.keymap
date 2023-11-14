@@ -43,7 +43,7 @@
     behaviors {
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
-            label = "HMR";
+            label = "HML";
             bindings = <&kp>, <&kp>;
             tapping-term-ms = <280>;
             flavor = "balanced";
