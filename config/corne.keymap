@@ -45,7 +45,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HML";
             bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <280>;
             flavor = "balanced";
@@ -59,7 +58,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HMR";
             bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <280>;
             flavor = "balanced";
@@ -123,7 +121,7 @@
 
         mouse {
             bindings = <
-&trans  &trans  &mkp LCLK       &trans    &mkp RCLK  &trans    &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
+&trans  &trans  &mkp LCLK       &mkp MCLK     &mkp RCLK  &trans    &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
 &to 0   &trans  &trans  &trans  &trans  &trans    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans           &trans  &trans
                         &trans  &to 5   &trans    &trans  &trans          &trans
