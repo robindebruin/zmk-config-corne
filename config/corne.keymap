@@ -20,7 +20,7 @@
 
 /* ------MOUSE MOUSE SETTINGS----- */
 
-#define U_MOUSE_MOVE_MAX 1400                     /* <--- New max speed setting (default: 600) */
+#define U_MOUSE_MOVE_MAX 600                     /* <--- New max speed setting (default: 600) */
 
 #undef MOVE_UP
 #undef MOVE_DOWN
@@ -141,8 +141,8 @@
 
         mouse_ {
             bindings = <
-&trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &mwh SCROLL_UP  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
-&to 0   &trans  &trans     &trans     &trans     &trans    &mwh SCROLL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &mwh SCROLL_DOWN  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
+&to 0   &trans  &trans     &trans     &trans     &trans    &mwh SCROLL_UP   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans     &trans     &trans     &trans    &trans  &trans          &trans          &trans           &trans  &trans
                            &trans     &to 5      &trans    &trans  &trans          &trans
             >;
