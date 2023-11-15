@@ -20,7 +20,7 @@
 
 /* ------MOUSE MOUSE SETTINGS----- */
 
-#define U_MOUSE_MOVE_MAX 600                     /* <--- New max speed setting (default: 600) */
+#define U_MOUSE_MOVE_MAX 900                     /* <--- New max speed setting (default: 600) */
 
 #undef MOVE_UP
 #undef MOVE_DOWN
