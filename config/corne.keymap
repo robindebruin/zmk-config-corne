@@ -124,7 +124,7 @@
 
             bindings = <
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR    &trans        &kp N7  &kp N8  &kp N9  &trans  &trans
-&to 0   &trans        &trans        &trans        &trans        &trans        &trans        &kp N4  &kp N5  &kp N6  &trans  &trans
+&to 0   &trans        &trans        &trans        &trans        &trans        &trans        &kp N4  &kp N5  &kp N6  &to 3   &trans
 &trans  &trans        &trans        &trans        &trans        &trans        &kp NUMBER_0  &kp N1  &kp N2  &kp N3  &trans  &trans
                                     &trans        &trans        &trans        &trans        &to 5   &trans
             >;
