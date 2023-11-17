@@ -61,10 +61,9 @@
     behaviors {
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
-            label = "HML";
-            bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;            
+            label = "HML";
             tapping-term-ms = <280>;
             flavor = "balanced";
             quick-tap-ms = <175>;
@@ -75,10 +74,9 @@
 
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
-            label = "HMR";
-            bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            label = "HMR";
             tapping-term-ms = <280>;
             flavor = "balanced";
             quick-tap-ms = <175>;
