@@ -150,9 +150,9 @@
 
         arrows_and_media {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp PAGE_UP    &trans      &kp UP_ARROW  &trans      &kp C_VOLUME_UP    &trans
+&trans  &none  &none  &none  &none  &none    &kp PAGE_UP    &none      &kp UP_ARROW  &none      &kp C_VOLUME_UP    &trans
 &to 0   &trans  &trans  &trans  &trans  &trans    &kp PAGE_DOWN  &kp LEFT    &kp DOWN      &kp RIGHT   &kp C_VOLUME_DOWN  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans         &kp C_PREV  &kp C_PP      &kp C_NEXT  &kp K_MUTE         &trans
+&trans  &none  &none  &none  &none  &none    &none         &kp C_PREV  &kp C_PP      &kp C_NEXT  &kp K_MUTE         &trans
                         &trans  &trans  &trans    &trans         &none       &trans
             >;
         };
