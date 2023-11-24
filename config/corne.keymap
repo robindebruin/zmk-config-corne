@@ -85,15 +85,15 @@
             hold-trigger-on-release;
         };
 
+    
         modifier_or_to_layer: modifier_or_to_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "MODIFIER_OR_TO_LAYER";
-            bindings = <&none>, <&none>;
-
+            bindings = <&MOD_LSHIFT>, <&LT(f_keys)>;
             #binding-cells = <2>;
             hold-trigger-key-positions = <36>;
             tapping-term-ms = <200>;
-        };
+         };
     };
 
     keymap {
@@ -110,7 +110,7 @@
 &kp TAB         &kp Q         &kp W            &kp E                &kp R  &kp T         &kp Y      &kp U  &kp I                 &kp O             &kp P                 &kp BSPC
 &kp LEFT_SHIFT  &hml LCTRL A  &hml LEFT_ALT S  &hml LEFT_COMMAND D  &kp F  &kp G         &kp H      &kp J  &hmr RIGHT_COMMAND K  &hmr RIGHT_ALT L  &hmr RCTRL SEMICOLON  &hmr RIGHT_SHIFT APOS
 &kp ESCAPE      &kp Z         &kp X            &kp C                &kp V  &kp B         &kp N      &kp M  &kp COMMA             &kp DOT           &kp FSLH              &kp ESC
-                                               &kp LGUI             &to 1  &kp RETURN    &kp SPACE  &to 2  &kp RALT
+                                               &kp modifier_or_to_layer             &to 1  &kp RETURN    &kp SPACE  &to 2  &kp RALT
             >;
         };
 
