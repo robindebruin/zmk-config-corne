@@ -89,7 +89,7 @@
         modifier_or_to_layer: modifier_or_to_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "MODIFIER_OR_TO_LAYER";
-            bindings = <&MOD_LSHIFT>, <&LT(f_keys)>;
+            bindings = <&MOD_LSHIFT>, <&LT(1)>;
             #binding-cells = <2>;
             hold-trigger-key-positions = <36>;
             tapping-term-ms = <200>;
