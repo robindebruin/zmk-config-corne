@@ -79,21 +79,29 @@
             label = "HMR";
             tapping-term-ms = <280>;
             flavor = "balanced";
-            quick-tap-ms = <175>;
+
+             // when pressed _again_ within this time tap behavior will be triggered
+            quick-tap-ms = <175>;     
+
+            // require-prior-idle-ms is like quick-tap-ms however it will apply for any non-modifier key pressed before it. 
+            //  dus key a > shift b (shift b is dan waar dit gedefineerd is) binnen deze tijd is alijd ab.
+            // This effectively disables the hold-tap when typing quickly.
             require-prior-idle-ms = <150>;
+
+            // f you press any key NOT listed in hold-trigger-key-positions before tapping-term-ms expires, it will produce a tap.
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 41 40>;
             hold-trigger-on-release;
         };
 
     
-        modifier_or_to_layer: modifier_or_to_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MODIFIER_OR_TO_LAYER";
-            bindings = <&MOD_LSHIFT>, <&to 4>;
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <36>;
-            tapping-term-ms = <200>;
-         };
+        // modifier_or_to_layer: modifier_or_to_layer {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     label = "MODIFIER_OR_TO_LAYER";
+        //     bindings =  <&kp>, <&kp>;//<&MOD_LSHIFT>, <&to 4>;
+        //     #binding-cells = <2>;
+        //     hold-trigger-key-positions = <36>; 
+        //     tapping-term-ms = <200>;
+        //  };
     };
 
     keymap {
