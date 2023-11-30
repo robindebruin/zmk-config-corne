@@ -105,7 +105,6 @@
             bindings = <&kp>, <&to>;
 
             #binding-cells = <2>;
-            hold-trigger-key-positions = <36>;
             tapping-term-ms = <200>;
         };
     };
