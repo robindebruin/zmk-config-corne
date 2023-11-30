@@ -92,8 +92,9 @@
 
             require-prior-idle-ms = <150>;
 
-            // f you press any key NOT listed in hold-trigger-key-positions before tapping-term-ms expires, it will produce a tap.
-
+            // if you press any key NOT listed in hold-trigger-key-positions before tapping-term-ms expires, it will produce a tap.
+            // dus een key die wel in deze lijst staat houd de hold trigger aan.
+        
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 41 40>;
             hold-trigger-on-release;
         };
@@ -130,7 +131,7 @@
         symbol {
             bindings = <
 &trans  &kp EXCLAMATION  &kp AT            &kp HASH         &kp DOLLAR             &kp PERCENT          &kp CARET  &kp AMPS   &kp ASTERISK  &kp UNDERSCORE  &none  &trans
-&to 0   &kp GRAVE        &kp TILDE         &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET     &kp PIPE   &kp MINUS  &kp EQUAL     &kp PLUS        &none  &trans
+&to 0   &hml GRAVE        &hml TILDE         &hml LEFT_BRACE   &hml LEFT_PARENTHESIS   &kp LEFT_BRACKET     &kp PIPE   &hmr RIGHT_SHIFT MINUS  &hmr RIGHT_COMMAND EQUAL     &hmr RIGHT_ALT PLUS       &kp LCTRL  &trans
 &trans  &kp LESS_THAN    &kp GREATER_THAN  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET    &none      &none      &none         &none           &none  &trans
                                            &trans           &trans                 &trans               &trans     &trans     &trans
             >;
