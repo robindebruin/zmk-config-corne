@@ -5,7 +5,9 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
+
+
 
 /* use helper macros to define left and right hand keys */
 
@@ -18,38 +20,27 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5 // right-hand keys
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2
 
-/* ------MOUSE MOUSE SETTINGS----- */
-
-#define U_MOUSE_MOVE_MAX 1100                     /* <--- New max speed setting (default: 600) */
-
-#undef MOVE_UP
-#undef MOVE_DOWN
-#undef MOVE_LEFT
-#undef MOVE_RIGHT
-
-#define MOVE_UP MOVE_VERT(-U_MOUSE_MOVE_MAX)
-#define MOVE_DOWN MOVE_VERT(U_MOUSE_MOVE_MAX)
-#define MOVE_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
-#define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
+/* ------ MOUSE CLICK SETTINGS----- */
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1100  // default: 600 the default value of the max speed depends on this
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
 
 &mmv {
-    time-to-max-speed-ms = <700>;             /* <--- How long time until max speed is reached (default: 500) */
+    x-input-code = <INPUT_REL_X>;
+    y-input-code = <INPUT_REL_Y>;
+    time-to-max-speed-ms = <700>; // DEFAULT: 300
+    acceleration-exponent = <1>;
 };
 
-/* ------------------------------- */
-/* ------MOUSE WHEEL SETTINGS----- */
+/* ------MOUSE SCROLL SETTINGS----- */
+&msc {
+    x-input-code = <INPUT_REL_HWHEEL>;
+    y-input-code = <INPUT_REL_WHEEL>;
+    time-to-max-speed-ms = <700>; // DEFAULT: 300
+    acceleration-exponent = <0>;
+};
+ 
 
-#define U_MOUSE_SCROLL_MAX 15                    /* <--- New max speed setting (default: 10) */
-
-#undef SCROLL_UP
-#undef SCROLL_DOWN
-#undef SCROLL_LEFT
-#undef SCROLL_RIGHT
-
-#define SCROLL_UP SCROLL_VERT(U_MOUSE_SCROLL_MAX)
-#define SCROLL_DOWN SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
-#define SCROLL_LEFT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
-#define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
+// #define U_MOUSE_SCROLL_MAX 15                    /* <--- New max speed setting (default: 10) */
 
 /* ------------------------------- */
 
